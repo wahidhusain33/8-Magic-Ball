@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Magic Ball</title>
+    <style>
+        body {
+            background: linear-gradient(90deg, skyblue, seagreen);
+            color: white;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .inputx {
+            text-align: center;
+        }
+
+        #quesName {
+            background: linear-gradient(90deg, skyblue, seagreen);
+            text-align: center;
+            color: white;
+            height: 8vh;
+            width: 30%;
+            font-size: 25px;
+            border: 2px solid white;
+        }
+
+        #head1 {
+            font-size: 4em;
+        }
+
+        button {
+            background: linear-gradient(90deg, skyblue, seagreen);
+            border: 1px solid white;
+            display: inline-block;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            padding: 12px 16px;
+            border-radius: 4px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: cyan;
+            color: darkred;
+            transition: 2s;
+        }
+
+        #quesAsk {
+            color: darkred;
+        }
+
+        #answer {
+            color: darkgreen;
+        }
+        .flex-container1{
+            display: flex;
+        }
+        #listing{
+            margin-top: 12vh;
+            margin-left: 7%;
+            font-size: larger;
+            font-weight: bold;
+        }
+        h3{
+            font-size: 30px;
+        }
+        li{
+            cursor: pointer;
+        }
+        .animation{
+            position: relative;
+            animation-duration: 1s;
+            animation-name: example;
+            animation-iteration-count: 3;
+            animation-direction: reverse;
+        }
+        @keyframes example {
+            0% {left: 0; top: 0;}
+            25%{left:2%; top:2vh;}
+            50%{left: 4%; top: 3vh;}
+            75%{left: 6%;top: 2vh;}
+            100%{left: 0; top: 0;}
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="inputx">
+        <h1 id="head1">Enter Your Question</h1>
+        <input type="text" id="quesName">
+        <button type="button" onclick="startIt()">Enter</button>
+        <button type="button" onclick="refreshPage()">Try Again</button>
+        <a href="index.html"><button type="button">Quit</button></a>
+        <h2 id="quesAsk"></h2>
+
+        <h3 id="answer"></h3>
+    </div>
+    <div class="flex-container1">
+
+        <div class="img">
+            <img id="mainImg" src="ball8.png" alt="Magic 8 Ball">
+        </div>
+        <div id="listing">
+            <h3>Click on question to get prediction</h3>
+            <ul>
+                <li onclick="questionList()">Will I pass Common Admission Test next year?</li>
+                <li onclick="questionList()">Will Modi ji become president of America?</li>
+                <li onclick="questionList()">Will India win the World cup 20-20 next year?</li>
+                <li onclick="questionList()">Will Virat reach the milestone of 100 centuries?</li>
+                <li onclick="questionList()">Can Rahul Gandhi become Prime Minister of India?</li>
+            </ul>
+        </div>
+    </div>
+    <script src="magic.js" charset="utf-8"></script>
+</body>
+
+</html>
